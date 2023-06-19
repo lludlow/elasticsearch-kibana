@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-LABEL maintainer "nshou <nshou@coronocoya.net>"
+LABEL maintainer "lludlow <lludlow@accumtech.com>"
 
 ENV EK_VERSION=7.70
 
