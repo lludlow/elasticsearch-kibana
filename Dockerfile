@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 LABEL maintainer "nshou <nshou@coronocoya.net>"
 
-ENV EK_VERSION=8.7.1
+ENV EK_VERSION=7.70
 
 RUN apt-get update -qq >/dev/null 2>&1 \
  && apt-get install wget sudo -qqy >/dev/null 2>&1 \
