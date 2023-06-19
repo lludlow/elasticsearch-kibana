@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 LABEL maintainer "lludlow <lludlow@accumtech.com>"
 
-ENV EK_VERSION=7.70
+ENV EK_VERSION=7.7.0
 
 RUN apt-get update -qq >/dev/null 2>&1 \
  && apt-get install wget sudo -qqy >/dev/null 2>&1 \
@@ -21,3 +21,4 @@ RUN wget -q -O - https://artifacts.elastic.co/downloads/elasticsearch/elasticsea
 CMD elasticsearch-${EK_VERSION}/bin/elasticsearch -E http.host=0.0.0.0 -E xpack.security.enabled=false --quiet & kibana-${EK_VERSION}/bin/kibana --allow-root --host 0.0.0.0 -Q
 
 EXPOSE 9200 5601
+
